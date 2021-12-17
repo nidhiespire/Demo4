@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="test">
+	
+	<test name="chrome" enabled="true">
+		<parameter name="browser" value="chrome" />
+		<classes>
+       	<class name="mu.testCases.TC_homesol_002" />
+		
+          
+		</classes>
+</test>
+
+
+
+
+</suite>
