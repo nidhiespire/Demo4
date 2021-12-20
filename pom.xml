@@ -171,8 +171,8 @@
 					<version>2.22.1</version>
            <configuration>
                   <suiteXmlFiles>
+             
                <suiteXmFile>C:\AutomationFramework\TestNGFile\nidhilogin.xml</suiteXmFile>
-               <suiteXmFile>C:\AutomationFramework\TestNGFile\suittest.xml</suiteXmFile>
 
            </suiteXmlFiles>
                  </configuration> 

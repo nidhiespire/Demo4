@@ -6,7 +6,7 @@
 	<test name="chrome" enabled="true">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="mu.testCases.TC_LoginTestPS_001" />
+			<class name="mu.testCases.TC_homesol_002" />
          
 		</classes>
 	</test>
