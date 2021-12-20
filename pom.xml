@@ -51,6 +51,11 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+<dependency>
+    <groupId>org.openrdf.sesame</groupId>
+    <artifactId>sesame-rio-api</artifactId>
+    <version>2.7.2</version>
+</dependency>
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
