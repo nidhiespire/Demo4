@@ -82,7 +82,7 @@ public class CommonUtilities extends mu.testCases.TestBaseClass
 	 * @param driver
 	 */
 	
-	public void javascriptClick(WebElement ele, WebDriver driver) 
+	public static void javascriptClick(WebElement ele, WebDriver driver) 
 	{
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", ele);
@@ -245,7 +245,7 @@ public class CommonUtilities extends mu.testCases.TestBaseClass
 	 * @param pooltimeOutInSeconds
 	 */
 	
-	public static void fluentlyWaitForElementToLoad(WebDriver driver, WebElement locator)
+	public void fluentlyWaitForElementToLoad(WebDriver driver, WebElement locator)
 	{
 		// Waiting [timeOutInSeconds] seconds for an element to be present on the page, checking
 		// for its presence once every [pooltimeOutInSeconds] seconds.	

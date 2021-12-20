@@ -7,40 +7,30 @@ import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Test;
 
+import HomeSolutionModule.FilterProduct;
 import HomeSolutionModule.homewifi;
 import LoginModule.LoginPage;
 
 public class TC_homesol_002 extends TestBaseClass 
 {
-	
+
 	@Test(enabled=true)
-	public void homesol() throws InterruptedException, InvalidFormatException, HeadlessException, IOException, AWTException
+	public void housesolutionTab_test() throws InterruptedException, InvalidFormatException, HeadlessException, IOException, AWTException
 	{
 		homewifi _wifi=new homewifi();
 		_wifi.housesolutionTab();
+		_wifi.display_productqty();
+		_wifi.Addtocart();
 
-		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifi");
-		_wifi.picklist();
-		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilist");
-		_wifi.clic_wifi();
-		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilistproduct");
-
+//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifi");
+//		_wifi.picklist();
+//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilist");
+//		_wifi.clic_wifi();
+//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilistproduct");
+		
 	}
 	
-//	@Test(enabled=true)
-//	public void loginTestSS() throws InterruptedException
-//	{
-//		System.out.println("LoginPage");
-//		LoginPage lp = new LoginPage();
-//		System.out.println(config.getSSusnername());
-//		lp.setUserName(config.getSSusnername());
 	
-//		//Thread.sleep(2000);
-//		//lp.clickOnNext();
-//		lp.setPassword(config.getPassword());
-//		lp.clickOnSubmit();
-//
-//	}
 //	
 //	@Test(enabled=true)
 //	public void loginTestL() throws InterruptedException

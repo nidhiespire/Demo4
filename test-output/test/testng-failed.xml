@@ -6,7 +6,7 @@
     <classes>
       <class name="mu.testCases.TC_homesol_002">
         <methods>
-          <include name="homesol"/>
+          <include name="housesolutionTab_test"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- mu.testCases.TC_homesol_002 -->
