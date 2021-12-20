@@ -1,27 +1,15 @@
 package LoginModule;
-
 import java.util.concurrent.TimeUnit;
-
-import bsh.Capabilities;
-import mu.testCases.TestBaseClass;
-import mu.utilities.CommonUtilities;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import mu.testCases.*;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class LoginPage extends TestBaseClass
 
 {
 
-CommonUtilities cu=new CommonUtilities();
+mu.utilities.CommonUtilities cu=new mu.utilities.CommonUtilities();
 
 	public LoginPage()
 	{

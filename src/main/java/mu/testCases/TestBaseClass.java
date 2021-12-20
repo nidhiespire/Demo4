@@ -21,7 +21,7 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import mu.utilities.ConfigReader;
+import utilities.ConfigReader;
 
 
 /**
@@ -32,9 +32,9 @@ import mu.utilities.ConfigReader;
 public class TestBaseClass 
 {
 	ConfigReader config=new ConfigReader();
-	public String baseURL =config.getURL();
+	public String baseURL =ConfigReader.getURL();
 	public static SoftAssert assertt = new SoftAssert();
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	
 	
 	boolean status = false;

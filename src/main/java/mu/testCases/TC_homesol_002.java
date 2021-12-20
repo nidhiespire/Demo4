@@ -1,5 +1,4 @@
 package mu.testCases;
-
 import java.awt.AWTException;
 import java.awt.HeadlessException;
 import java.io.IOException;
@@ -7,17 +6,17 @@ import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Test;
 
-import HomeSolutionModule.FilterProduct;
 import HomeSolutionModule.homewifi;
-import LoginModule.LoginPage;
 
-public class TC_homesol_002 extends TestBaseClass 
+
+
+public class TC_homesol_002 extends TestBaseClass
 {
 
 	@Test(enabled=true)
 	public void housesolutionTab_test() throws InterruptedException, InvalidFormatException, HeadlessException, IOException, AWTException
 	{
-		homewifi _wifi=new homewifi();
+		HomeSolutionModule.homewifi _wifi=new HomeSolutionModule.homewifi();
 		_wifi.housesolutionTab();
 		_wifi.display_productqty();
 		_wifi.Addtocart();
