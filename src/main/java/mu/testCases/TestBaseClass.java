@@ -1,26 +1,28 @@
 package mu.testCases;
-
+import java.awt.AWTException;
+import java.awt.HeadlessException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
-import javax.security.auth.login.ConfigurationSpi;
-import org.apache.log4j.PropertyConfigurator;
 //import org.apache.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.AfterClass;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+
+import mu.testCases.*;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import mu.utilities.*;
+//import utilities.Screenshotcapture;
 import utilities.ConfigReader;
 
 
@@ -31,11 +33,11 @@ import utilities.ConfigReader;
  */
 public class TestBaseClass 
 {
-	ConfigReader config=new ConfigReader();
-	public String baseURL =ConfigReader.getURL();
+	int i;
+    protected ConfigReader config=new ConfigReader ();
+	public String baseURL =config.getURL();
 	public static SoftAssert assertt = new SoftAssert();
-	public static  WebDriver driver;
-	
+	public static WebDriver driver;
 	
 	boolean status = false;
 	public static Logger logger=LogManager.getLogger(TestBaseClass.class);
@@ -47,6 +49,7 @@ public class TestBaseClass
 	 * @param br
 	 * @throws InterruptedException
 	 */
+
 	
 	public void setUp(String br) throws InterruptedException
 	{
@@ -71,7 +74,7 @@ public class TestBaseClass
 			WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
 			Thread.sleep(1500);
-			logger.info("ChromeBrowser is Open");
+			logger.info("Edge is Open");
 		}
 		else if(br.equalsIgnoreCase("Safari"))
 		{
@@ -81,19 +84,23 @@ public class TestBaseClass
 		}
 		else
 		{
+			ChromeOptions chp=new ChromeOptions();
+			//chp.addArguments("--diable-gpu");
+			//chp.addArguments("disable-feature=NetworkService");
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			//WebDriverManager.chromedriver().forceDownload().setup();
+			
+			driver=new ChromeDriver(chp);
 		}
 		logger.info("URL is Open");
 		driver.get(baseURL);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
 	}
 	
-	/**
-	 *Close all open browser after each class.
-	 */
+	
 	
 //	@AfterMethod(alwaysRun = true)
 //	public void tearDown()
@@ -101,4 +108,24 @@ public class TestBaseClass
 //		System.out.println("@AfterClass");
 //		driver.quit();
 //	}
+	// Taking Screen shot on test fail
+    @AfterMethod
+    public void screenshot(ITestResult result) throws HeadlessException, IOException, AWTException
+    {
+               i = i+1;
+               String name = "ScreenShot";
+               String x = name+String.valueOf(i);
+              if(ITestResult.FAILURE == result.getStatus())
+                {
+                             
+            	 Screenshotcapture.captureAsImage(driver, x);
+                }
+                 }
+	
+	
+	/*@AfterTest(alwaysRun = true)
+	public void teardown()
+	{
+		driver.close();
+	}*/
 }

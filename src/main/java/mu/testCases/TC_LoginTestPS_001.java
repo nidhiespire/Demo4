@@ -2,12 +2,10 @@ package mu.testCases;
 import org.testng.annotations.Test;
 
 import LoginModule.LoginPage;
-import mu.utilities.CommonUtilities;
-import mu.utilities.*;
-
-public class TC_LoginTestPS_001 extends Basepage.TestBaseClass
+import utilities.ConfigReader;
+public class TC_LoginTestPS_001 extends TestBaseClass
 {
-	//CommonUtilities.ConfigReader config=new utilities.CommonUtilities.ConfigReader();
+ConfigReader config=new ConfigReader();
 	
 	//@Parameters("browser")
 	@Test(enabled=true)
@@ -35,7 +33,7 @@ public class TC_LoginTestPS_001 extends Basepage.TestBaseClass
 	}
 
 	
-	@Test(enabled=true)
+	/*@Test(enabled=true)
 	public void loginTestAO() throws InterruptedException
 	{
 		System.out.println("LoginPage");
@@ -47,6 +45,6 @@ public class TC_LoginTestPS_001 extends Basepage.TestBaseClass
 		lp.setPassword(config.getPassword());
 		lp.clickOnSubmit();
 
-	}
+	}*/
 
 }
