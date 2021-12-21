@@ -7,7 +7,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +18,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.OutputType;
@@ -31,12 +29,12 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.assertthat.selenium_shutterbug.core.Shutterbug;
-import com.google.common.base.Function;
+
+import mu.testCases.TestBaseClass;
 
 
 
-public class CommonUtilities extends mu.testCases.TestBaseClass
+public class CommonUtilities extends TestBaseClass
 {
 	public String failed_Message = "";
 	static JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -70,7 +68,8 @@ public class CommonUtilities extends mu.testCases.TestBaseClass
 		{
 			alertDriver.switchTo().alert().dismiss();
 			logger.info("Alert dismiass");
-		}catch(Exception ex)
+		}
+		catch(Exception ex)
 		{
 			logger.error("No alert Found");
 		}
@@ -82,7 +81,7 @@ public class CommonUtilities extends mu.testCases.TestBaseClass
 	 * @param driver
 	 */
 	
-	public static void javascriptClick(WebElement ele, WebDriver driver) 
+	public void javascriptClick(WebElement ele, WebDriver driver) 
 	{
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", ele);

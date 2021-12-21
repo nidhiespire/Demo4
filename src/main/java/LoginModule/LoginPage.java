@@ -1,15 +1,18 @@
 package LoginModule;
 import java.util.concurrent.TimeUnit;
-import mu.testCases.*;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import mu.testCases.TestBaseClass;
+import mu.utilities.CommonUtilities;
 
 public class LoginPage extends TestBaseClass
 
 {
 
-mu.utilities.CommonUtilities cu=new mu.utilities.CommonUtilities();
+CommonUtilities cu=new CommonUtilities();
 
 	public LoginPage()
 	{

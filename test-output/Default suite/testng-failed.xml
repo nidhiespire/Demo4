@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mu.testCases.TC_homesol_002">
+      <class name="mu.testCases.TC_LoginTestPS_001">
         <methods>
-          <include name="housesolutionTab_test"/>
           <include name="setUp"/>
+          <include name="screenshot"/>
+          <include name="loginTestPS"/>
         </methods>
-      </class> <!-- mu.testCases.TC_homesol_002 -->
+      </class> <!-- mu.testCases.TC_LoginTestPS_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -18,7 +18,7 @@ public class ConfigReader {
 		try
 		{
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("./Configurations/config.properties");
+			FileInputStream fis = new FileInputStream("./Configurations/config2.properties");
 			prop.load(fis);
 		}
 		catch(Exception e)
@@ -32,7 +32,7 @@ public class ConfigReader {
 	 * @return
 	 */
 	
-	public String getURL()
+	public static String getURL()
 	{
 		String url = prop.getProperty("baseURL");
 		return url;

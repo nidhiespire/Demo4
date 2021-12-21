@@ -17,13 +17,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
-
-import mu.testCases.*;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import mu.utilities.*;
 //import utilities.Screenshotcapture;
-import utilities.ConfigReader;
+//import utilities.ConfigReader;
 
 
 /**
@@ -34,10 +31,10 @@ import utilities.ConfigReader;
 public class TestBaseClass 
 {
 	int i;
-    protected ConfigReader config=new ConfigReader ();
-	public String baseURL =config.getURL();
+    ConfigReader config=new ConfigReader();
+	public String baseURL =ConfigReader.getURL();
 	public static SoftAssert assertt = new SoftAssert();
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	
 	boolean status = false;
 	public static Logger logger=LogManager.getLogger(TestBaseClass.class);

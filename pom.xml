@@ -18,11 +18,6 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
-                 
-
-
-
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -135,11 +130,6 @@
             <url>https://bonigarcia.dev/</url>
         </developer>
     </developers>
-
-
-
-
-
 <scm>
         <connection>scm:git:git://github.com/bonigarcia/webdrivermanager.git</connection>
         <developerConnection>scm:git:git@github.com:bonigarcia/webdrivermanager.git</developerConnection>
@@ -199,9 +189,6 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-
-                 
-
 
 			</plugins>
 		</pluginManagement>

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="test" duration-ms="39505" started-at="2021-12-20T22:58:34 GMT+05:30" finished-at="2021-12-20T22:59:13 GMT+05:30">
+  <suite name="test" duration-ms="38379" started-at="2021-12-21T16:33:18 GMT+05:30" finished-at="2021-12-21T16:33:57 GMT+05:30">
     <groups>
     </groups>
-    <test name="chrome" duration-ms="39505" started-at="2021-12-20T22:58:34 GMT+05:30" finished-at="2021-12-20T22:59:13 GMT+05:30">
+    <test name="chrome" duration-ms="38379" started-at="2021-12-21T16:33:18 GMT+05:30" finished-at="2021-12-21T16:33:57 GMT+05:30">
       <class name="mu.testCases.TC_homesol_002">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:mu.testCases.TC_homesol_002@3972a855]" name="setUp" is-config="true" duration-ms="9948" started-at="2021-12-20T22:58:34 GMT+05:30" finished-at="2021-12-20T22:58:44 GMT+05:30">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:mu.testCases.TC_homesol_002@3972a855]" name="setUp" is-config="true" duration-ms="11061" started-at="2021-12-21T16:33:18 GMT+05:30" finished-at="2021-12-21T16:33:29 GMT+05:30">
           <params>
             <param index="0">
               <value>
@@ -18,10 +18,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="housesolutionTab_test()[pri:0, instance:mu.testCases.TC_homesol_002@3972a855]" name="housesolutionTab_test" duration-ms="29529" started-at="2021-12-20T22:58:44 GMT+05:30" finished-at="2021-12-20T22:59:13 GMT+05:30">
+        <test-method status="PASS" signature="housesolutionTab_test()[pri:0, instance:mu.testCases.TC_homesol_002@3972a855]" name="housesolutionTab_test" duration-ms="27288" started-at="2021-12-21T16:33:29 GMT+05:30" finished-at="2021-12-21T16:33:57 GMT+05:30">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- housesolutionTab_test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:mu.testCases.TC_homesol_002@3972a855]" name="screenshot" is-config="true" duration-ms="4" started-at="2021-12-21T16:33:57 GMT+05:30" finished-at="2021-12-21T16:33:57 GMT+05:30">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=housesolutionTab_test status=SUCCESS method=TC_homesol_002.housesolutionTab_test()[pri:0, instance:mu.testCases.TC_homesol_002@3972a855] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
       </class> <!-- mu.testCases.TC_homesol_002 -->
     </test> <!-- chrome -->
   </suite> <!-- test -->

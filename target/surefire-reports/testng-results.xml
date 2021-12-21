@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="test" duration-ms="37102" started-at="2021-12-21T16:48:48 GMT+05:30" finished-at="2021-12-21T16:49:25 GMT+05:30">
+    <groups>
+    </groups>
+    <test name="chrome" duration-ms="37102" started-at="2021-12-21T16:48:48 GMT+05:30" finished-at="2021-12-21T16:49:25 GMT+05:30">
+      <class name="mu.testCases.TC_homesol_002">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:mu.testCases.TC_homesol_002@4c39bec8]" name="setUp" is-config="true" duration-ms="10268" started-at="2021-12-21T16:48:48 GMT+05:30" finished-at="2021-12-21T16:48:58 GMT+05:30">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="housesolutionTab_test()[pri:0, instance:mu.testCases.TC_homesol_002@4c39bec8]" name="housesolutionTab_test" duration-ms="26809" started-at="2021-12-21T16:48:58 GMT+05:30" finished-at="2021-12-21T16:49:25 GMT+05:30">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- housesolutionTab_test -->
+        <test-method status="PASS" signature="screenshot(org.testng.ITestResult)[pri:0, instance:mu.testCases.TC_homesol_002@4c39bec8]" name="screenshot" is-config="true" duration-ms="0" started-at="2021-12-21T16:49:25 GMT+05:30" finished-at="2021-12-21T16:49:25 GMT+05:30">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=housesolutionTab_test status=SUCCESS method=TC_homesol_002.housesolutionTab_test()[pri:0, instance:mu.testCases.TC_homesol_002@4c39bec8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshot -->
+      </class> <!-- mu.testCases.TC_homesol_002 -->
+    </test> <!-- chrome -->
+  </suite> <!-- test -->
+</testng-results>

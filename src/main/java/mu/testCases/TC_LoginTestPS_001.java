@@ -1,36 +1,40 @@
-package mu.testCases;
+/*package mu.testCases;
+
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import LoginModule.LoginPage;
-import utilities.ConfigReader;
-public class TC_LoginTestPS_001 extends TestBaseClass
-{
-ConfigReader config=new ConfigReader();
-	
-	//@Parameters("browser")
-	@Test(enabled=true)
-	public void loginTestPS() throws InterruptedException
-	{
-		//ConfigReader config=new ConfigReader();
-			LoginPage _lp = new LoginPage();
-		     /*click on icon and sign*/
-			
-			_lp.clickaccount();
-			_lp.sig();
-					
-			/*enterusername and pass*/
-			System.out.println("LoginPage");
-			
-			System.out.println(config.getUsername());
-		
-			_lp.setUserName(config.getUsername());
-			Thread.sleep(1000);
-		
-			_lp.setPassword(config.getPassword());
-			Thread.sleep(1000);
 
-			_lp.clickOnSubmit();
-	}
+import utilities.ConfigReader;
+
+//public class TC_LoginTestPS_001
+//{
+//ConfigReader config=new ConfigReader();
+//	
+//	//@Parameters("browser")
+//	@Test(enabled=true)
+//	public void loginTestPS() throws InterruptedException
+//	{
+//		//ConfigReader config=new ConfigReader();
+//			LoginPage _lp = new LoginPage();
+//		     /*click on icon and sign*/
+//			
+//			_lp.clickaccount();
+//			_lp.sig();
+//					
+//			/*enterusername and pass*/
+//			System.out.println("LoginPage");
+//			
+//			System.out.println(config.getUsername());
+//		
+//			_lp.setUserName(config.getUsername());
+//			Thread.sleep(1000);
+//		
+//			_lp.setPassword(config.getPassword());
+//			Thread.sleep(1000);
+//
+//			_lp.clickOnSubmit();
+//	}*/
 
 	
 	/*@Test(enabled=true)
@@ -47,4 +51,4 @@ ConfigReader config=new ConfigReader();
 
 	}*/
 
-}
+//}
