@@ -2,8 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 	
-<suite name="test">
-	
+<suite name="Netgeardemo">
+
+ <test name="Firefox" enabled="true">
+		<parameter name="browser" value="firefox" />
+		<classes>
+		<class name="mu.testCases.TC_Alogin_001" />
+		</classes>
+	</test>
+ 
 	<test name="chrome" enabled="true">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -12,3 +19,7 @@
 		</classes>
 	</test>
 </suite>
+
+
+
+

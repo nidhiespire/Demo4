@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import mu.testCases.TestBaseClass;
 import mu.utilities.CommonUtilities;
@@ -38,13 +39,14 @@ CommonUtilities cu=new CommonUtilities();
 		try 
 		{
 			acc.click();
-			
+			System.out.println("Clicked on Account Sucessfully");
+
 							
 		} 
 		catch (Exception e)
 		{
 			// TODO: handle exception
-			System.out.println("Exception"+e);
+			System.out.println("Error while clicked on Account"+e);
 		}
 		
 	}
@@ -65,10 +67,11 @@ CommonUtilities cu=new CommonUtilities();
 			// TODO: handle exception
 			System.out.println("Exception"+e);
 		}
-		
 	}
+		
+
 	
-	
+
 	
 	
 		
@@ -81,13 +84,14 @@ CommonUtilities cu=new CommonUtilities();
 			
 			System.out.println("Entered Username");
 			username.sendKeys(uname);
-			
+			System.out.println("User name entered sucessfully");
+
 		
 		} 
 		catch (Exception e)
 		{
 			// TODO: handle exception
-			System.out.println("Exception"+e);
+			System.out.println("Error"+e);
 		}
 		
 	}
@@ -99,7 +103,9 @@ CommonUtilities cu=new CommonUtilities();
 			//CommonUtilities.waitForElementToBeClickable(driver, pword, 2000);
 			System.out.println("Entered Password");
 			pword.sendKeys(password);
+			System.out.println("Password  entered sucessfully");
 			Thread.sleep(3000);
+			
 		
 		} 
 		catch (Exception e)
@@ -121,16 +127,18 @@ CommonUtilities cu=new CommonUtilities();
 			
 			mu.utilities.Screenshotcapture.captureAsImage(driver, "browser");
 			
-			System.out.println("submitted sucessfully");
+			System.out.println("Logged in credentrail submitted sucessfully");
 			}
 			
 	
 		catch (Exception e)
 		{
-			System.out.println("not able to submit");
+			logger.info("Exception"+e.getMessage());
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			
 		}
 		
 	}
+	
+	
 }

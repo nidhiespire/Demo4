@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
@@ -120,7 +121,7 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                  }
 	
 	
-	/*@AfterTest(alwaysRun = true)
+/*	@AfterTest(alwaysRun = true)
 	public void teardown()
 	{
 		driver.close();

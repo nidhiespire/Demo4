@@ -4,34 +4,36 @@ import java.awt.HeadlessException;
 import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import HomeSolutionModule.homewifi;
+import LoginModule.LoginPage;
+import mu.utilities.ConfigReader;
 
 
 
 public class TC_homesol_002 extends TestBaseClass
 {
 
-	@Test(enabled=true)
+	ConfigReader config=new ConfigReader();
+	@Parameters("browser")
+		@Test(enabled=true,priority=3)
+	
 	public void housesolutionTab_test() throws InterruptedException, InvalidFormatException, HeadlessException, IOException, AWTException
 	{
 		HomeSolutionModule.homewifi _wifi=new HomeSolutionModule.homewifi();
 		_wifi.housesolutionTab();
 		_wifi.display_productqty();
 		_wifi.Addtocart();
-
-//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifi");
-//		_wifi.picklist();
-//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilist");
-//		_wifi.clic_wifi();
-//		mu.utilities.Screenshotcapture.captureAsImage(driver,"homwifilistproduct");
-		
-	}
 	
+	
+			
+//_wifi.checkout();
+		}
+		
 	
 //	
-//	@Test(enabled=true)
+//	@Test(enabled=true,priority=3)
 //	public void loginTestL() throws InterruptedException
 //	{
 //		System.out.println("LoginPage");
